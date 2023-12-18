@@ -30,6 +30,7 @@
         <v-list-item v-for="video in videos" :key="video.id">
           <v-list-item-content>
             <v-list-item-title>{{ video.name }}</v-list-item-title>
+            <v-list-item-subtitle>URL: {{ video.url }}</v-list-item-subtitle>
             <v-list-item-subtitle>Theme: {{ video.theme }}</v-list-item-subtitle>
             <v-list-item-subtitle>
               Thumbs Up: {{ video.thumbs_up }} | Thumbs Down: {{ video.thumbs_down }}
