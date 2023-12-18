@@ -1,13 +1,17 @@
+import os
+
 from flask import Flask
 from flask_cors import CORS
 
 from .models import init_app
 from .routes import api
 
+MONGO_URI = os.getenv("MONGO_URI")
+
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_pyfile("config.py")
+    app.config["MONGO_URI"] = MONGO_URI
 
     CORS(app)
 
