@@ -22,7 +22,7 @@
       </template>
     </v-dialog>
 
-    <router-link to="/themes">asdas</router-link>
+    <router-link to="/themes">Go to themes</router-link>
 
     <h2>Video List</h2>
     <v-list>
