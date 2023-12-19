@@ -60,9 +60,7 @@ def get_themes():
 
     for theme in themes:
         videos = mongo.db.videos.find({"theme": theme})
-        score = sum(
-            (video["thumbs_up"] - (video["thumbs_down"])) / 2 for video in videos
-        )
+        score = sum(video["thumbs_up"] - video["thumbs_down"] / 2 for video in videos)
         theme_scores[theme] = score
 
     # Sort themes by score in descending order
